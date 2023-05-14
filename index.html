@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Bootstrap</title>
+    <link rel="stylesheet" href="demo.css">
+  </head>
+<body>
+  <div id = "header">
+    <div class="container">
+      <nav>
+      <ul>
+        <li> <a href ="#">Home</a></li>
+        <li> <a href ="#">About</a></li>
+        <li> <a href ="#">Portfolio</a></li>
+        <li> <a href ="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-text">
+      <p>ComSci Student</p>
+      <h1>Hi, I'm Allyssa Marie Macapagal</h1>
+    </div>
+    </div>
+  </div>
+
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="pic.jpg">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>I am Allyssa Marie Macapagal, I live in San Jose Concepcion, Tarlac. <br>I am a college student and I'd love to play online games.</p>
+        <div class="tab-titles">
+          <p class="tab-links active-links" onclick="opentab(personal info)">Personal Info </p>
+          <p class="tab-links" onclick="opentab(education)">Education</p>
+          <p class="tab-links" onclick="opentab(experience)">Experience</p>
+        </div>
+        <div class="tab-contents active-tab" id="personal info">
+          <ul>
+            <li><span>Age</span> <br> 21 years old</li>
+            <li><span>Birthdate</span> <br> November 16, 2001</li>
+            <li><span>Religion</span> <br> Roman Catholic</li>
+          </ul>
+         </div>
+         <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2020-2023</span> <br> Concepcion Holy Cross College</li>
+            <li><span>2013-2019</span> <br> Benigno S. Aquino National Highschool</li>
+            <li><span>2007-2013</span> <br> Magunting Elementary School</li>
+          </ul>
+         </div>
+         <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2020</span> <br> Municipal Treasury Office (Government Internship Program</li>
+          </ul>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title"> Random Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="2.jpg" width="350" height="550">
+      </div>
+      <div class="work">
+        <img src="3.jpg" width="350" height="550">
+      </div>
+      <div class="work">
+        <img src="1.jpg" width="350" height="550">
+      </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+  </div>
+</div>
+
+
+<div id="contact">
+  <div class="container">
+    <div class="row">
+       <div class="contact-left">
+         <h1 class="sub-title">Contact Me</h1>
+         <p>macapagalallyssamarie05@yahoo.com</p>
+         <p>09514997908</p>
+       </div>
+       <div class="contact-right">
+         <form>
+           <input type="text" name="Name" placeholder="Your Name" required>
+           <input type="email" name="email" placeholder="Your Email" required>
+           <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+           <button type="submit" class="btn">Submit</button>
+         </form>
+       </div>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.add("active-link");
+    document.getElementsById(tabname).classList.add("active-tab");
+  }
+</script>
+</body>
+
+</html>
